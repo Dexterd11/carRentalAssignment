@@ -45,6 +45,8 @@ make test
 
 `make test` runs the Gradle tests and then starts the Docker container to test a
 real booking through HTTP. The container is stopped automatically after the test.
+The Gradle tests mock the credit-card client, so credit-card approval and rejection
+can be tested without running the external credit-card service.
 
 The container exposes port `8080`. Override the external service locations when
 needed:
